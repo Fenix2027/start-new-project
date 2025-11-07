@@ -8,6 +8,13 @@ const app = (0, express_1.default)();
 const port = 3000;
 const jsonBodyMiddleware = express_1.default.json();
 app.use(jsonBodyMiddleware);
+const http_statuses = {
+    OK_200: 200,
+    CREATED_201: 201,
+    NO_CONTED: 204,
+    BAD_REQUEST: 400,
+    NOT_FOUND: 404
+};
 const db = {
     courses: [{ id: 1, title: 'front-end' },
         { id: 2, title: 'beck-end' },
@@ -25,14 +32,14 @@ app.get('/courses', (req, res) => {
 app.get('/courses/:id', (req, res) => {
     const foundCourse = db.courses.find(c => c.id === +req.params.id);
     if (!foundCourse) {
-        res.sendStatus(404);
+        res.sendStatus(http_statuses.NOT_FOUND);
         return;
     }
     res.json(foundCourse);
 });
 app.post('/courses', (req, res) => {
     if (!req.body.title) {
-        res.sendStatus(400);
+        res.sendStatus(http_statuses.BAD_REQUEST);
         return;
     }
     const createdCourse = {
@@ -41,25 +48,25 @@ app.post('/courses', (req, res) => {
     };
     db.courses.push(createdCourse);
     res
-        .status(201)
+        .status(http_statuses.CREATED_201)
         .json(createdCourse);
 });
 app.delete('/courses/:id', (req, res) => {
     db.courses = db.courses.filter(c => c.id !== +req.params.id);
-    res.sendStatus(204);
+    res.sendStatus(http_statuses.NO_CONTED);
 });
 app.put('/courses/:id', (req, res) => {
     if (!req.body.title) {
-        res.sendStatus(400);
+        res.sendStatus(http_statuses.BAD_REQUEST);
         return;
     }
     const foundCourse = db.courses.find(c => c.id === +req.params.id);
     if (!foundCourse) {
-        res.sendStatus(404);
+        res.sendStatus(http_statuses.NOT_FOUND);
         return;
     }
     foundCourse.title = req.body.title;
-    res.sendStatus(204);
+    res.sendStatus(http_statuses.NO_CONTED);
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
