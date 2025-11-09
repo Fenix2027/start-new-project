@@ -1,10 +1,10 @@
 import express  from 'express'
 
-const app = express()
+export const app = express()
 const port = 3000
 const jsonBodyMiddleware = express.json()
 app.use(jsonBodyMiddleware)
-const http_statuses = {
+export const http_statuses = {
     OK_200: 200,
     CREATED_201: 201,
     NO_CONTEND: 204,
@@ -69,6 +69,11 @@ app.put('/courses/:id', (req, res) => {
         return;
     }
     foundCourse.title = req.body.title
+    res.sendStatus(http_statuses.NO_CONTEND)
+})
+app.delete('/__test__/data', (req, res) => {
+    db.courses = [];
+
     res.sendStatus(http_statuses.NO_CONTEND)
 })
 app.listen(port, () => {
