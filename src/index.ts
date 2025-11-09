@@ -1,5 +1,5 @@
 import express  from 'express'
-import {runInNewContext} from "node:vm";
+
 const app = express()
 const port = 3000
 const jsonBodyMiddleware = express.json()
@@ -7,7 +7,7 @@ app.use(jsonBodyMiddleware)
 const http_statuses = {
     OK_200: 200,
     CREATED_201: 201,
-    NO_CONTED: 204,
+    NO_CONTEND: 204,
     BAD_REQUEST: 400,
     NOT_FOUND: 404
 }
@@ -15,7 +15,7 @@ const http_statuses = {
 const db = {
     courses: [ {id: 1, title: 'front-end'},
         {id: 2, title: 'beck-end'},
-        {id: 3, title: 'automtion qa'},
+        {id: 3, title: 'automation qa'},
         {id: 4, title: 'devops'}]
 }
 
@@ -55,7 +55,7 @@ app.post('/courses', (req, res) => {
 app.delete('/courses/:id', (req, res) => {
     db.courses = db.courses.filter(c => c.id !== +req.params.id);
 
-    res.sendStatus(http_statuses.NO_CONTED)
+    res.sendStatus(http_statuses.NO_CONTEND)
 })
 
 app.put('/courses/:id', (req, res) => {
@@ -69,7 +69,7 @@ app.put('/courses/:id', (req, res) => {
         return;
     }
     foundCourse.title = req.body.title
-    res.sendStatus(http_statuses.NO_CONTED)
+    res.sendStatus(http_statuses.NO_CONTEND)
 })
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

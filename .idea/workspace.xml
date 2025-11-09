@@ -4,10 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -6">
+    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodemon" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nodemon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodemon.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nodemon.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodemon.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodetouch" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nodetouch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodetouch.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nodetouch.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nodetouch.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-script" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-script.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-script.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-script.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-script" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-script.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-script.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-script.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsc.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsserver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/any-map.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/binary-search.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/by-source.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/resolve.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/sort.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/sourcemap-segment.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/strip-filename.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/trace-mapping.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/dist/types/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-flag/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-flag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-flag/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/supports-color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/supports-color/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +101,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -47,32 +111,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "javascript.nodejs.core.library.configured.version": "22.16.0",
-    "javascript.nodejs.core.library.typings.version": "22.16.5",
-    "js.last.introduce.type": "CONST",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/k4164/Desktop/Lessons/start-new-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "npm.dev.executor": "Run",
-    "npm.watch.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\k4164\\Desktop\\Lessons\\start-new-project\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.16.5&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/k4164/Desktop/Lessons/start-new-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.watch.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\k4164\\Desktop\\Lessons\\start-new-project\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src" />
@@ -123,7 +187,8 @@
       <workItem from="1762254210099" duration="6510000" />
       <workItem from="1762334109218" duration="3767000" />
       <workItem from="1762355790283" duration="152000" />
-      <workItem from="1762522066163" duration="8331000" />
+      <workItem from="1762522066163" duration="8536000" />
+      <workItem from="1762682399078" duration="1789000" />
     </task>
     <task id="LOCAL-00001" summary="Commit -1">
       <option name="closed" value="true" />
@@ -181,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762540236611</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit -7">
+      <option name="closed" value="true" />
+      <created>1762544048876</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762544048876</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +286,7 @@
     <MESSAGE value="Commit -4" />
     <MESSAGE value="Commit -5" />
     <MESSAGE value="Commit -6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit -6" />
+    <MESSAGE value="Commit -7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit -7" />
   </component>
 </project>
