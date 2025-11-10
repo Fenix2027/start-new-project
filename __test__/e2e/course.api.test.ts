@@ -1,6 +1,7 @@
 import request from 'supertest'
 import {app, http_statuses} from '../../src'
 import {CreateCourseModel} from "../../src/modeis/CreateCourseModel";
+import {UpdateCourseModel} from "../../src/modeis/UpdateCourseModel";
 describe('/course', () => {
     beforeAll(async () => {
         await request(app).delete('/__test__/data')
@@ -54,15 +55,16 @@ describe('/course', () => {
     })
     let createCourse2: any = null;
     it('created one more course', async () => {
+    const data: CreateCourseModel = {title: 'new course 2'};
         const createResponse = await request(app)
 
             .post('/courses')
-            .send({title: 'new course 2'})
+            .send(data)
             .expect(http_statuses.CREATED_201)
         createCourse2 = createResponse.body;
         expect(createCourse2).toEqual({
             id: expect.any(Number),
-            title: 'new course 2'
+            title: data.title
         })
 
         await request(app)
@@ -71,10 +73,11 @@ describe('/course', () => {
             })
 
     it('should not updated course with incorrect input data', async () => {
+        const data: CreateCourseModel = {title: ''};
         await request(app)
 
             .put('/courses/' + createCourse.id)
-            .send({title: ''})
+            .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
@@ -83,26 +86,28 @@ describe('/course', () => {
     })
 
     it('should not updated course that not exist', async () => {
+        const data: UpdateCourseModel = {title: 'new'};
         await request(app)
 
             .put('/courses/' + -100)
-            .send({title: 'new'})
+            .send(data)
             .expect(http_statuses.NOT_FOUND)
 
     })
 
     it('should updated course with correct input data', async () => {
+        const data: UpdateCourseModel = {title: 'new course'};
         await request(app)
 
             .put('/courses/' + createCourse.id)
-            .send({title: 'new course'})
+            .send(data)
             .expect(http_statuses.NO_CONTEND)
 
         await request(app)
             .get('/courses/' + createCourse.id)
             .expect(http_statuses.OK_200, {
                 ...createCourse,
-                title: 'new course'
+                title: data.title
             })
     })
 

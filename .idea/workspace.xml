@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -14">
+    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modeis/CreateCourseModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/CreateCourseModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modeis/QueryCoursesModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/QueryCoursesModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modeis/URIParamsCourseIdModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/URIParamsCourseIdModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modeis/UpdateCourseModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/UpdateCourseModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +181,7 @@
       <workItem from="1762355790283" duration="152000" />
       <workItem from="1762522066163" duration="8536000" />
       <workItem from="1762682399078" duration="16777000" />
-      <workItem from="1762789848429" duration="7356000" />
+      <workItem from="1762789848429" duration="9777000" />
     </task>
     <task id="LOCAL-00001" summary="Commit -1">
       <option name="closed" value="true" />
@@ -297,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762796305173</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Commit -15">
+      <option name="closed" value="true" />
+      <created>1762797607060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762797607060</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +342,19 @@
     <MESSAGE value="Commit -11" />
     <MESSAGE value="Commit -12" />
     <MESSAGE value="Commit -14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit -14" />
+    <MESSAGE value="Commit -15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit -15" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/__test__/e2e/course.api.test.ts</url>
+          <line>87</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
