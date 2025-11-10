@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -11">
-      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -12">
+      <change afterPath="$PROJECT_DIR$/src/modeis/CreateCourseModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modeis/QueryCoursesModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modeis/UpdateCourseModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modeis/CourseCreateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/CourseViewModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modeis/CourseUpdateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeis/URIParamsCourseIdModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modeis/GetCoursesQueryModel.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +186,7 @@
       <workItem from="1762355790283" duration="152000" />
       <workItem from="1762522066163" duration="8536000" />
       <workItem from="1762682399078" duration="16777000" />
-      <workItem from="1762789848429" duration="2846000" />
+      <workItem from="1762789848429" duration="6315000" />
     </task>
     <task id="LOCAL-00001" summary="Commit -1">
       <option name="closed" value="true" />
@@ -279,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762789967649</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit -12">
+      <option name="closed" value="true" />
+      <created>1762792901039</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762792901039</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +329,7 @@
     <MESSAGE value="Commit -9" />
     <MESSAGE value="Commit -10" />
     <MESSAGE value="Commit -11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit -11" />
+    <MESSAGE value="Commit -12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit -12" />
   </component>
 </project>
