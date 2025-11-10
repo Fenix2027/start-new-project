@@ -1,5 +1,6 @@
 import request from 'supertest'
 import {app, http_statuses} from '../../src'
+import {CreateCourseModel} from "../../src/modeis/CreateCourseModel";
 describe('/course', () => {
     beforeAll(async () => {
         await request(app).delete('/__test__/data')
@@ -18,10 +19,13 @@ describe('/course', () => {
     })
 
     it('should not created course with incorrect input data', async () => {
+
+        const data: CreateCourseModel = {title: ''};
+
         await request(app)
 
             .post('/courses')
-            .send({title: ''})
+            .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
@@ -32,10 +36,11 @@ describe('/course', () => {
 
     let createCourse: any = null;
     it('should created course with correct input data', async () => {
+        const data: CreateCourseModel = {title: 'new course'};
         const createResponse = await request(app)
 
             .post('/courses')
-            .send({title: 'new course'})
+            .send(data)
             .expect(http_statuses.CREATED_201)
          createCourse = createResponse.body;
         expect(createCourse).toEqual({
