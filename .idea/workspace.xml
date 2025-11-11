@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -15">
+      <change afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
@@ -86,6 +87,9 @@
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\__test__\e2e" />
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src" />
     </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src\db.ts" />
+    </key>
   </component>
   <component name="RunManager" selected="Jest./course">
     <configuration name="/course" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -126,39 +130,33 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="/course.should not created course with incorrect input data" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
       <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" />
-      <test-names>
-        <test-name value="/course" />
-        <test-name value="should not created course with incorrect input data" />
-      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="/course.should return 200 and empty array" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
       <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__test__/e2e/course.api.test.ts" />
-      <test-names>
-        <test-name value="/course" />
-        <test-name value="should return 200 and empty array" />
-      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Jest./course" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.watch" />
         <item itemvalue="Jest./course.should created course with correct input data" />
         <item itemvalue="Jest./course.created one more course" />
-        <item itemvalue="Jest./course.should not created course with incorrect input data" />
-        <item itemvalue="Jest./course.should return 200 and empty array" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +179,8 @@
       <workItem from="1762355790283" duration="152000" />
       <workItem from="1762522066163" duration="8536000" />
       <workItem from="1762682399078" duration="16777000" />
-      <workItem from="1762789848429" duration="9777000" />
+      <workItem from="1762789848429" duration="9862000" />
+      <workItem from="1762873824521" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="Commit -1">
       <option name="closed" value="true" />
@@ -303,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762797607060</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commit -15">
+      <option name="closed" value="true" />
+      <created>1762799807126</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762799807126</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,8 +357,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/__test__/e2e/course.api.test.ts</url>
-          <line>87</line>
-          <properties lambdaOrdinal="-1" />
+          <line>93</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

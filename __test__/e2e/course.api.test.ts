@@ -1,20 +1,25 @@
 import request from 'supertest'
-import {app, http_statuses} from '../../src'
 import {CreateCourseModel} from "../../src/modeis/CreateCourseModel";
 import {UpdateCourseModel} from "../../src/modeis/UpdateCourseModel";
+import {app, http_statuses} from "../../src/app";
+
+const getRequest = () => {
+    return request(app)
+}
+
 describe('/course', () => {
     beforeAll(async () => {
-        await request(app).delete('/__test__/data')
+        await getRequest().delete('/__test__/data')
     })
 
     it('should return 200 and empty array', async () => {
-        await request(app)
+        await getRequest()
             .get('/courses')
             .expect(http_statuses.OK_200, [])
     })
 
     it('should return 404 for not existing course', async () => {
-        await request(app)
+        await getRequest()
             .get('/courses/1')
             .expect(http_statuses.NOT_FOUND)
     })
@@ -38,7 +43,8 @@ describe('/course', () => {
     let createCourse: any = null;
     it('should created course with correct input data', async () => {
         const data: CreateCourseModel = {title: 'new course'};
-        const createResponse = await request(app)
+
+        const createResponse = await getRequest()
 
             .post('/courses')
             .send(data)
@@ -49,7 +55,7 @@ describe('/course', () => {
             title: 'new course'
         })
 
-        await request(app)
+        await getRequest()
             .get('/courses')
             .expect(http_statuses.OK_200, [createCourse])
     })
@@ -87,7 +93,7 @@ describe('/course', () => {
 
     it('should not updated course that not exist', async () => {
         const data: UpdateCourseModel = {title: 'new'};
-        await request(app)
+        await getRequest()
 
             .put('/courses/' + -100)
             .send(data)
@@ -97,13 +103,13 @@ describe('/course', () => {
 
     it('should updated course with correct input data', async () => {
         const data: UpdateCourseModel = {title: 'new course'};
-        await request(app)
+        await getRequest()
 
             .put('/courses/' + createCourse.id)
             .send(data)
             .expect(http_statuses.NO_CONTEND)
 
-        await request(app)
+        await getRequest()
             .get('/courses/' + createCourse.id)
             .expect(http_statuses.OK_200, {
                 ...createCourse,
