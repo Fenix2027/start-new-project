@@ -117,7 +117,7 @@ describe('/course', () => {
             })
     })
 
-    it('should delete both courses', async () => {
+    it('should delete both courses.ts', async () => {
         await request(app)
 
             .delete('/courses/' + createCourse.id)
