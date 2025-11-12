@@ -9,20 +9,20 @@ const getRequest = () => {
     return request(app)
 }
 
-describe('/course', () => {
+describe('/users', () => {
     beforeAll(async () => {
         await getRequest().delete('/__test__/data')
     })
 
     it('should return 200 and empty array', async () => {
         await getRequest()
-            .get('/courses')
+            .get('/users')
             .expect(http_statuses.OK_200, [])
     })
 
     it('should return 404 for not existing course', async () => {
         await getRequest()
-            .get('/courses/1')
+            .get('/users/1')
             .expect(http_statuses.NOT_FOUND)
     })
 
@@ -32,12 +32,12 @@ describe('/course', () => {
 
         await request(app)
 
-            .post('/courses')
+            .post('/users')
             .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
-            .get('/courses')
+            .get('/users')
             .expect(http_statuses.OK_200, [])
 
     })
@@ -48,10 +48,10 @@ describe('/course', () => {
 
         const createResponse = await getRequest()
 
-            .post('/courses')
+            .post('/users')
             .send(data)
             .expect(http_statuses.CREATED_201)
-         createCourse = createResponse.body;
+        createCourse = createResponse.body;
         expect(createCourse).toEqual({
             id: expect.any(Number),
             title: 'new course'
@@ -63,7 +63,7 @@ describe('/course', () => {
     })
     let createCourse2: any = null;
     it('created one more course', async () => {
-    const data: CreateCourseModel = {title: 'new course 2'};
+        const data: CreateCourseModel = {title: 'new course 2'};
         const createResponse = await request(app)
 
             .post('/courses')
@@ -78,7 +78,7 @@ describe('/course', () => {
         await request(app)
             .get('/courses')
             .expect(http_statuses.OK_200, [createCourse,createCourse2])
-            })
+    })
 
     it('should not updated course with incorrect input data', async () => {
         const data: CreateCourseModel = {title: ''};
@@ -141,8 +141,7 @@ describe('/course', () => {
 
             .get('/courses')
             .expect(http_statuses.OK_200,[])
-            })
     })
-
+})
 
 
