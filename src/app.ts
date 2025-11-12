@@ -1,8 +1,8 @@
 import express from 'express'
-import {getCoursesRouter} from "./routes/courses.router";
+import {getCoursesRouter} from "./features/courses/courses.router";
 import {getTestsRoutes} from "./routes/tests";
 import {db} from "./db/db";
-import {getUsersRouter} from "./routes/users.router";
+import {getUsersRouter} from "./features/users/users.router";
 
 export const app = express()
 export const jsonBodyMiddleware = express.json()

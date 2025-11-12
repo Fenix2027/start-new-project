@@ -1,8 +1,8 @@
 import request from 'supertest'
-import {CreateCourseModel} from "../../src/modeis/CreateCourseModel";
-import {UpdateCourseModel} from "../../src/modeis/UpdateCourseModel";
+import {CreateCourseModel} from "../../src/features/courses/modeis/CreateCourseModel";
+import {UpdateCourseModel} from "../../src/features/courses/modeis/UpdateCourseModel";
 import {app, RouterPaths} from "../../src/app";
-import {http_statuses} from "../../src/routes/courses.router";
+import {http_statuses} from "../../src/features/courses/courses.router";
 
 
 const getRequest = () => {
@@ -42,59 +42,59 @@ describe('/users', () => {
 
     })
 
-    let createCourse: any = null;
+    let createEntity: any = null;
     it('should created course with correct input data', async () => {
-        const data: CreateCourseModel = {title: 'new course'};
+        const data: CreateUserModel = {userName: 'dimych'};
 
         const createResponse = await getRequest()
 
             .post(RouterPaths.users)
             .send(data)
             .expect(http_statuses.CREATED_201)
-        createCourse = createResponse.body;
-        expect(createCourse).toEqual({
+        createEntity = createResponse.body;
+        expect(createEntity).toEqual({
             id: expect.any(Number),
-            title: 'new course'
+            userName: data.userName
         })
 
         await getRequest()
             .get(RouterPaths.users)
-            .expect(http_statuses.OK_200, [createCourse])
+            .expect(http_statuses.OK_200, [createEntity])
     })
-    let createCourse2: any = null;
-    it('created one more course', async () => {
-        const data: CreateCourseModel = {title: 'new course 2'};
+    let createEntity2: any = null;
+    it('created one more entity', async () => {
+        const data: CreateUserModel = {userName: 'ivan'};
         const createResponse = await request(app)
 
             .post(RouterPaths.users)
             .send(data)
             .expect(http_statuses.CREATED_201)
-        createCourse2 = createResponse.body;
-        expect(createCourse2).toEqual({
+        createEntity2 = createResponse.body;
+        expect(createEntity2).toEqual({
             id: expect.any(Number),
-            title: data.title
+            userName: data.userName
         })
 
         await request(app)
             .get(RouterPaths.users)
-            .expect(http_statuses.OK_200, [createCourse,createCourse2])
+            .expect(http_statuses.OK_200, [createEntity,createEntity2])
     })
 
-    it('should not updated course with incorrect input data', async () => {
-        const data: CreateCourseModel = {title: ''};
+    it('should not updated entity with incorrect input data', async () => {
+        const data: CreateUserModel = {userName: ''};
         await request(app)
 
-            .put(`${RouterPaths.users}/${createCourse.id}`)
+            .put(`${RouterPaths.users}/${createEntity.id}`)
             .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
-            .get(`${RouterPaths.users}/${createCourse.id}`)
-            .expect(http_statuses.OK_200, createCourse)
+            .get(`${RouterPaths.users}/${createEntity.id}`)
+            .expect(http_statuses.OK_200, createEntity)
     })
 
-    it('should not updated course that not exist', async () => {
-        const data: UpdateCourseModel = {title: 'new'};
+    it('should not updated entity that not exist', async () => {
+        const data: CreateUserModel = {userName: ''};
         await getRequest()
 
             .put(`${RouterPaths.users}/${-100}`)
@@ -104,38 +104,38 @@ describe('/users', () => {
     })
 
     it('should updated course with correct input data', async () => {
-        const data: UpdateCourseModel = {title: 'new course'};
+        const data: CreateUserModel = {userName: 'DIMYCH'};
         await getRequest()
 
-            .put(`${RouterPaths.users}/${createCourse.id}`)
+            .put(`${RouterPaths.users}/${createEntity.id}`)
             .send(data)
             .expect(http_statuses.NO_CONTEND)
 
         await getRequest()
-            .get(`${RouterPaths.users}/${createCourse.id}`)
+            .get(`${RouterPaths.users}/${createEntity.id}`)
             .expect(http_statuses.OK_200, {
-                ...createCourse,
-                title: data.title
+                ...data,
+                userName: data.userName
             })
     })
 
     it('should delete both courses.router.ts', async () => {
         await request(app)
 
-            .delete(`${RouterPaths.users}/${createCourse.id}`)
+            .delete(`${RouterPaths.users}/${createEntity.id}`)
             .expect(http_statuses.NO_CONTEND)
 
         await request(app)
-            .get(`${RouterPaths.users}/${createCourse.id}`)
+            .get(`${RouterPaths.users}/${createEntity.id}`)
             .expect(http_statuses.NOT_FOUND)
 
         await request(app)
 
-            .delete(`${RouterPaths.users}/${createCourse2.id}`)
+            .delete(`${RouterPaths.users}/${createEntity2.id}`)
             .expect(http_statuses.NO_CONTEND)
 
         await request(app)
-            .get(`${RouterPaths.users}/${createCourse2.id}`)
+            .get(`${RouterPaths.users}/${createEntity2.id}`)
             .expect(http_statuses.NOT_FOUND)
         await request(app)
 

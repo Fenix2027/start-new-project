@@ -1,11 +1,11 @@
 import express, {Express, Response} from "express";
-import {RequestWithBody, RequestWithParams, RequestWithParamsAndBody, RequestWithQuery} from "../types";
-import {QueryCoursesModel} from "../modeis/QueryCoursesModel";
-import {CourseViewModel} from "../modeis/CourseViewModel";
-import {URIParamsCourseIdModel} from "../modeis/URIParamsCourseIdModel";
-import {CreateCourseModel} from "../modeis/CreateCourseModel";
-import {UpdateCourseModel} from "../modeis/UpdateCourseModel";
-import {CourseType, DBtype} from "../db/db";
+import {RequestWithBody, RequestWithParams, RequestWithParamsAndBody, RequestWithQuery} from "../../types";
+import {QueryCoursesModel} from "./modeis/QueryCoursesModel";
+import {CourseViewModel} from "./modeis/CourseViewModel";
+import {URIParamsCourseIdModel} from "./modeis/URIParamsCourseIdModel";
+import {CreateCourseModel} from "./modeis/CreateCourseModel";
+import {UpdateCourseModel} from "./modeis/UpdateCourseModel";
+import {CourseType, DBtype} from "../../db/db";
 
 
 export const getCourseviewModel = (dbCourse: CourseType): CourseViewModel => {

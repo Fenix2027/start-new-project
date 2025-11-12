@@ -1,5 +1,5 @@
 import {DBtype} from "../db/db";
-import {http_statuses} from "./courses.router";
+import {http_statuses} from "../features/courses/courses.router";
 import express from "express";
 
 
