@@ -1,7 +1,7 @@
 import request from 'supertest'
 import {CreateCourseModel} from "../../src/modeis/CreateCourseModel";
 import {UpdateCourseModel} from "../../src/modeis/UpdateCourseModel";
-import {app} from "../../src/app";
+import {app, RouterPaths} from "../../src/app";
 import {http_statuses} from "../../src/routes/courses.router";
 
 
@@ -16,28 +16,28 @@ describe('/users', () => {
 
     it('should return 200 and empty array', async () => {
         await getRequest()
-            .get('/users')
+            .get(RouterPaths.users)
             .expect(http_statuses.OK_200, [])
     })
 
     it('should return 404 for not existing course', async () => {
         await getRequest()
-            .get('/users/1')
+            .get(`${RouterPaths.users}/1`)
             .expect(http_statuses.NOT_FOUND)
     })
 
     it('should not created course with incorrect input data', async () => {
 
-        const data: CreateCourseModel = {title: ''};
+        const data: CreateUserModel = {userName: ''};
 
         await request(app)
 
-            .post('/users')
+            .post(RouterPaths.users)
             .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
-            .get('/users')
+            .get(RouterPaths.users)
             .expect(http_statuses.OK_200, [])
 
     })
@@ -48,7 +48,7 @@ describe('/users', () => {
 
         const createResponse = await getRequest()
 
-            .post('/users')
+            .post(RouterPaths.users)
             .send(data)
             .expect(http_statuses.CREATED_201)
         createCourse = createResponse.body;
@@ -58,7 +58,7 @@ describe('/users', () => {
         })
 
         await getRequest()
-            .get('/courses')
+            .get(RouterPaths.users)
             .expect(http_statuses.OK_200, [createCourse])
     })
     let createCourse2: any = null;
@@ -66,7 +66,7 @@ describe('/users', () => {
         const data: CreateCourseModel = {title: 'new course 2'};
         const createResponse = await request(app)
 
-            .post('/courses')
+            .post(RouterPaths.users)
             .send(data)
             .expect(http_statuses.CREATED_201)
         createCourse2 = createResponse.body;
@@ -76,7 +76,7 @@ describe('/users', () => {
         })
 
         await request(app)
-            .get('/courses')
+            .get(RouterPaths.users)
             .expect(http_statuses.OK_200, [createCourse,createCourse2])
     })
 
@@ -84,12 +84,12 @@ describe('/users', () => {
         const data: CreateCourseModel = {title: ''};
         await request(app)
 
-            .put('/courses/' + createCourse.id)
+            .put(`${RouterPaths.users}/${createCourse.id}`)
             .send(data)
             .expect(http_statuses.BAD_REQUEST)
 
         await request(app)
-            .get('/courses/' + createCourse.id)
+            .get(`${RouterPaths.users}/${createCourse.id}`)
             .expect(http_statuses.OK_200, createCourse)
     })
 
@@ -97,7 +97,7 @@ describe('/users', () => {
         const data: UpdateCourseModel = {title: 'new'};
         await getRequest()
 
-            .put('/courses/' + -100)
+            .put(`${RouterPaths.users}/${-100}`)
             .send(data)
             .expect(http_statuses.NOT_FOUND)
 
@@ -107,12 +107,12 @@ describe('/users', () => {
         const data: UpdateCourseModel = {title: 'new course'};
         await getRequest()
 
-            .put('/courses/' + createCourse.id)
+            .put(`${RouterPaths.users}/${createCourse.id}`)
             .send(data)
             .expect(http_statuses.NO_CONTEND)
 
         await getRequest()
-            .get('/courses/' + createCourse.id)
+            .get(`${RouterPaths.users}/${createCourse.id}`)
             .expect(http_statuses.OK_200, {
                 ...createCourse,
                 title: data.title
@@ -122,24 +122,24 @@ describe('/users', () => {
     it('should delete both courses.router.ts', async () => {
         await request(app)
 
-            .delete('/courses/' + createCourse.id)
+            .delete(`${RouterPaths.users}/${createCourse.id}`)
             .expect(http_statuses.NO_CONTEND)
 
         await request(app)
-            .get('/courses/' + createCourse.id)
+            .get(`${RouterPaths.users}/${createCourse.id}`)
             .expect(http_statuses.NOT_FOUND)
 
         await request(app)
 
-            .delete('/courses/' + createCourse2.id)
+            .delete(`${RouterPaths.users}/${createCourse2.id}`)
             .expect(http_statuses.NO_CONTEND)
 
         await request(app)
-            .get('/courses/' + createCourse2.id)
+            .get(`${RouterPaths.users}/${createCourse2.id}`)
             .expect(http_statuses.NOT_FOUND)
         await request(app)
 
-            .get('/courses')
+            .get(RouterPaths.users)
             .expect(http_statuses.OK_200,[])
     })
 })

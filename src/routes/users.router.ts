@@ -8,12 +8,12 @@ import {UpdateCourseModel} from "../modeis/UpdateCourseModel";
 import {CourseType, DBtype} from "../db/db";
 
 
-// export const getCourseviewModel = (dbCourse: CourseType): CourseViewModel => {
-//     return {
-//         id: dbCourse.id,
-//         title: dbCourse.title
-//     }
-// }
+export const getCourseviewModel = (dbCourse: CourseType): CourseViewModel => {
+    return {
+        id: dbCourse.id,
+        title: dbCourse.title
+    }
+}
 export const http_statuses = {
     OK_200: 200,
     CREATED_201: 201,
