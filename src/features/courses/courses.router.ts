@@ -1,4 +1,4 @@
-import express, {Express, Response} from "express";
+import express, {Response} from "express";
 import {RequestWithBody, RequestWithParams, RequestWithParamsAndBody, RequestWithQuery} from "../../types";
 import {QueryCoursesModel} from "./modeis/QueryCoursesModel";
 import {CourseViewModel} from "./modeis/CourseViewModel";
@@ -8,7 +8,7 @@ import {UpdateCourseModel} from "./modeis/UpdateCourseModel";
 import {CourseType, DBtype} from "../../db/db";
 
 
-export const getCourseviewModel = (dbCourse: CourseType): CourseViewModel => {
+export const getCourseViewModel = (dbCourse: CourseType): CourseViewModel => {
     return {
         id: dbCourse.id,
         title: dbCourse.title
@@ -34,7 +34,7 @@ export const getCoursesRouter = (db: DBtype) => {
             foundCourses = foundCourses
                 .filter(c => c.title.indexOf(req.query.title) > -1)
         }
-        res.json(foundCourses.map(getCourseviewModel))
+        res.json(foundCourses.map(getCourseViewModel))
     })
 
     router.get('/:id', (req: RequestWithParams<URIParamsCourseIdModel>,
@@ -44,7 +44,7 @@ export const getCoursesRouter = (db: DBtype) => {
             res.sendStatus(http_statuses.NOT_FOUND)
             return;
         }
-        res.json(getCourseviewModel(foundCourse))
+        res.json(getCourseViewModel(foundCourse))
     })
 
     router.post('/', (req: RequestWithBody<CreateCourseModel>,
@@ -61,7 +61,7 @@ export const getCoursesRouter = (db: DBtype) => {
         db.courses.push(createdCourse)
         res
             .status(http_statuses.CREATED_201)
-            .json(getCourseviewModel(createdCourse))
+            .json(getCourseViewModel(createdCourse))
     })
 
     router.delete('/:id', (req: RequestWithParams<URIParamsCourseIdModel>,

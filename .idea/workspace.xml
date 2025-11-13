@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit -20">
+    <list default="true" id="59889ed7-c3b3-40ba-9f98-5e3d36cdb5fe" name="Changes" comment="Commit - 21">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__test__/e2e/users.api.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__test__/e2e/users.api.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/courses/courses.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/courses/courses.router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     "javascript.nodejs.core.library.typings.version": "22.16.5",
     "js.last.introduce.type": "CONST",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/k4164/Desktop/Lessons/start-new-project/src/routes",
+    "last_opened_file_path": "C:/Users/k4164/Desktop/Lessons/start-new-project/src/features/users",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,9 +83,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src\features\users" />
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src\features\courses" />
+      <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src\features\users" />
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\__test__\e2e" />
       <recent name="C:\Users\k4164\Desktop\Lessons\start-new-project\src" />
     </key>
@@ -183,7 +187,8 @@
       <workItem from="1762789848429" duration="9862000" />
       <workItem from="1762873824521" duration="9501000" />
       <workItem from="1762960098713" duration="826000" />
-      <workItem from="1762967968063" duration="5444000" />
+      <workItem from="1762967968063" duration="5756000" />
+      <workItem from="1763046659674" duration="882000" />
     </task>
     <task id="LOCAL-00001" summary="Commit -1">
       <option name="closed" value="true" />
@@ -361,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762971907167</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Commit - 21">
+      <option name="closed" value="true" />
+      <created>1762977491303</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762977491303</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +419,8 @@
     <MESSAGE value="Commit -18" />
     <MESSAGE value="Commit -19" />
     <MESSAGE value="Commit -20" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit -20" />
+    <MESSAGE value="Commit - 21" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit - 21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

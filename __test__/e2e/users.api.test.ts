@@ -1,8 +1,7 @@
 import request from 'supertest'
-import {CreateCourseModel} from "../../src/features/courses/modeis/CreateCourseModel";
-import {UpdateCourseModel} from "../../src/features/courses/modeis/UpdateCourseModel";
 import {app, RouterPaths} from "../../src/app";
 import {http_statuses} from "../../src/features/courses/courses.router";
+import {CreateUserModel} from "../../src/features/users/modeis/CreateUserModel";
 
 
 const getRequest = () => {
