@@ -30,9 +30,9 @@ export const getCoursesRouter = (db: DBtype) => {
     router.get('/', (req: RequestWithQuery<QueryCoursesModel>,
                                    res: Response<CourseViewModel[]>) => {
         let foundCourses = db.courses;
-        if(req.query.title) {
+        if(req.query.userName) {
             foundCourses = foundCourses
-                .filter(c => c.title.indexOf(req.query.title) > -1)
+                .filter(c => c.title.indexOf(req.query.userName) > -1)
         }
         res.json(foundCourses.map(getCourseViewModel))
     })
