@@ -10,7 +10,7 @@ const getRequest = () => {
 
 describe('/users', () => {
     beforeAll(async () => {
-        await getRequest().delete('/__test__/data')
+        await getRequest().delete(`${RouterPaths.__test__}/data`)
     })
 
     it('should return 200 and empty array', async () => {
@@ -93,7 +93,7 @@ describe('/users', () => {
     })
 
     it('should not updated entity that not exist', async () => {
-        const data: CreateUserModel = {userName: ''};
+        const data: CreateUserModel = {userName: 'a'};
         await getRequest()
 
             .put(`${RouterPaths.users}/${-100}`)
@@ -113,9 +113,12 @@ describe('/users', () => {
         await getRequest()
             .get(`${RouterPaths.users}/${createEntity.id}`)
             .expect(http_statuses.OK_200, {
-                ...data,
+                ...createEntity,
                 userName: data.userName
             })
+        await getRequest()
+            .get(`${RouterPaths.users}/${createEntity2.id}`)
+            .expect(http_statuses.OK_200, createEntity2)
     })
 
     it('should delete both courses.router.ts', async () => {

@@ -11,7 +11,7 @@ const getRequest = () => {
 
 describe('/course', () => {
     beforeAll(async () => {
-        await getRequest().delete('/__test__/data')
+        await getRequest().delete('/data')
     })
 
     it('should return 200 and empty array', async () => {

@@ -1,6 +1,6 @@
 import express, {Response} from "express";
 import {RequestWithBody, RequestWithParams, RequestWithParamsAndBody, RequestWithQuery} from "../../types";
-import {CourseType, DBtype, UserType} from "../../db/db";
+import {DBtype, UserType} from "../../db/db";
 import {http_statuses} from "../../utils";
 import {UserViewModel} from "./modeis/UserViewModel";
 import {CreateUserModel} from "./modeis/CreateUserModel";
@@ -15,8 +15,6 @@ export const mapEntityToViewModel = (dbEntity: UserType): UserViewModel => {
         userName: dbEntity.userName
     }
 }
-
-
 
 export const getUsersRouter = (db: DBtype) => {
     const router = express.Router()
@@ -70,12 +68,12 @@ export const getUsersRouter = (db: DBtype) => {
             res.sendStatus(http_statuses.BAD_REQUEST);
             return;
         }
-        const foundCourse = db.courses.find(c => c.id === +req.params.id);
-        if (!foundCourse) {
+        const foundUser = db.users.find(c => c.id === +req.params.id);
+        if (!foundUser) {
             res.sendStatus(http_statuses.NOT_FOUND)
             return;
         }
-        foundCourse.title = req.body.userName
+        foundUser.userName = req.body.userName
         res.sendStatus(http_statuses.NO_CONTEND)
     })
     return router

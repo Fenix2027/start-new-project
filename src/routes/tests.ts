@@ -7,7 +7,8 @@ export const getTestsRoutes = (db: DBtype) => {
     const router = express.Router()
     router.delete('/data', (req, res) => {
         db.courses = [];
-
+        db.users = [];
+        db.studentCourseBindings = [];
         res.sendStatus(http_statuses.NO_CONTEND)
     })
     return router
